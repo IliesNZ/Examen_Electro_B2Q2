@@ -355,7 +355,11 @@ La masse virtuelle oblige l'intégralité de ce courant à traverser la résista
 
 ### <em>À quoi sert-il ?</em>
 
+- Un différenciateur est un circuit électronique conçu pour réaliser l'opération mathématique de différentiation.  
 
+- Sa tension de sortie est directement proportionnelle à la vitesse instantanée de variation (c'est-à-dire la pente) de la tension appliquée à son entrée.  
+
+- Ses applications classiques sont la détection des fronts avant (montants) et arrière (descendants) d'une impulsion rectangulaire en les transformant en pics étroits, ou la production d'un signal de sortie rectangulaire à partir d'un signal d'entrée triangulaire.
 
 ### <em>Dessine le circuit de principe qui réalise cette fonction.</em>
 
@@ -367,7 +371,13 @@ La masse virtuelle oblige l'intégralité de ce courant à traverser la résista
 
 ### <em>Explique le fonctionnement de ce circuit en revenant, au besoin, sur les rappels de début de chapitre.</em>
 
+- Le rappel théorique (circuit RC de base) : Dans un circuit RC simple, lorsqu'un échelon de tension de valeur $V$ apparaît en entrée, le condensateur est initialement déchargé ($v_C = 0$). Par la loi de Kirchhoff ($v_R = v_{in} - v_C$), toute la tension se retrouve instantanément aux bornes de la résistance, faisant sauter la sortie à la valeur $V$ avant de décroître exponentiellement au fur et à mesure que le condensateur se charge.  
 
+- Le fonctionnement avec l'ampli-op : Grâce au concept de masse virtuelle sur l'entrée inverseuse (-), le courant provoqué par le signal d'entrée à travers le condensateur n'a pas d'autre choix que de traverser l'intégralité de la résistance de réaction $R$, générant ainsi la tension de sortie.  
+
+- Le courant traversant le condensateur est régi par la relation fondamentale : $i = C \frac{dv}{dt}$.  La grandeur $\frac{dv}{dt}$ représente la pente de la tension d'entrée. Comme les fronts d'une onde rectangulaire sont extrêmement raides (pente quasi infinie), ils engendrent un courant subit et très intense pendant un très court instant, ce qui crée ces pics de tension très étroits en sortie.  
+
+- Avantage de l'AOP : Contrairement au simple circuit RC, l'ampli-op permet d'obtenir une source de pics à basse impédance, rendant la connexion de charges classiques bien plus facile.  
 
 ### <em>Dessine le schéma d’amélioration du différenciateur.</em>
 
@@ -488,22 +498,44 @@ Conclusion : L'équation finale montre qu'il n'y a plus de composante à la fré
 
 ### <em>En quoi consiste la modulation ?</em>
 
-
+Pour transférer un signal numérique par les ondes, on doit moduler ce signal (page globale 198). L'émetteur module le signal pour pouvoir le transporter à travers le canal. À l'autre bout, le récepteur démodule ce signal pour restituer le signal numérique (binaire) d'origine.
 
 ### <em>Qu’est-ce que la Fm ?</em>
 
-
+La modulation FM (Modulation de Fréquence) correspond à une variation de la fréquence de l'onde porteuse par le signal information (page globale 180). Plus précisément (page globale 190), la valeur de la fréquence du signal varie autour de la fréquence de la porteuse ($f_o$), proportionnellement à la valeur du signal modulant $m(t)$. L'amplitude du signal, quant à elle, reste strictement constante.
 
 ### <em>Qu’est-ce que la PM (expliquer la différence).</em>
 
+La modulation PM (Modulation de Phase) correspond à une variation de la phase de l'onde porteuse par le signal information (page globale 180). On fait varier l'angle de phase en fonction des fluctuations de la modulante (page globale 191).
 
+- La différence visible (page globale 192) : Sur un diagramme temporel, si on compare la FM et la PM pour un même signal d'entrée sinusoïdal, on remarque un décalage. En PM, la fréquence la plus élevée (les "vagues" les plus serrées) est obtenue au moment d'un passage par zéro du signal d'information. En FM, les vagues les plus serrées sont obtenues au moment du sommet (l'amplitude maximale) du signal d'information.
 
 ### <em>Dessine un signal modulé en FM.</em>
 
+Le diagramme à dessiner se trouve à la page globale 190. Il faut représenter trois axes temporels superposés :
 
+1. Signal d'information (en haut) : Une sinusoïde lente oscillant autour de zéro.
+
+2. Signal de la porteuse (au milieu) : Une sinusoïde très rapide, régulière et d'amplitude constante.
+
+3. Signal FM (en bas) : Une onde d'amplitude constante, mais dont la fréquence varie. Les oscillations sont très serrées (haute fréquence) lorsque le signal d'information est à son maximum positif, et très espacées (basse fréquence) lorsque le signal d'information est à son minimum négatif.
 
 ### <em>Comment obtient-on une modulation FM ?</em>
 
+On l'obtient en utilisant un VCO (Voltage Commanded Oscillator, ou Oscillateur commandé en tension), comme expliqué à la page globale 191.
 
+- Schéma de principe : On additionne le signal modulant $s(t)$ avec une tension continue de référence ($V_o$). Cette somme entre dans le bloc VCO.
+
+- Fonctionnement : La tension d'entrée détermine directement la fréquence de sortie. Le signal varie autour de la tension de référence $V_o$, ce qui fait que la fréquence de sortie varie proportionnellement autour de la fréquence centrale $f_o$.
 
 ### <em>Quelle est l’allure d’un spectre FM (pas de calculs, expliquer la porteuse et les bandes latérales).</em>
+
+L'allure du spectre (décrite à la page globale 193) est complexe, mais voici ses caractéristiques principales à dessiner et expliquer :
+
+- Le spectre est symétrique et centré sur la fréquence de la porteuse ($f_o$).
+
+- Contrairement à l'AM qui n'a qu'une seule paire de bandes, la FM possède une "infinité" de bandes latérales (raies) de chaque côté.
+
+- Les bandes latérales : Elles sont espacées régulièrement de part et d'autre de la porteuse, à des distances correspondant à des multiples de la fréquence du signal modulant $F$ (on trouve des raies à $f_o+F$, $f_o-F$, puis $f_o+2F$, $f_o-2F$, etc.).
+
+- L'amplitude : L'amplitude de la porteuse centrale n'est pas constante (elle peut même s'annuler). L'amplitude de la porteuse et de chaque bande latérale dépend de courbes mathématiques appelées "fonctions de Bessel" (notées $J_0, J_1, J_2...$), qui varient en fonction de "l'indice de modulation".
