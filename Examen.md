@@ -390,27 +390,47 @@ La masse virtuelle oblige l'intégralité de ce courant à traverser la résista
 
 ### <em>En quoi consiste la modulation ?</em>
 
-
+L'émetteur inscrit l'information provenant d'une source sur une porteuse sinusoïdale de fréquence $f_o$ : c'est cela la modulation. Pour inscrire cette information sur la porteuse, on peut faire varier soit son amplitude, soit sa fréquence, soit sa phase en fonction du signal à transmettre.  
 
 ### <em>Qu’est-ce que la Am ?</em>
 
-
+La modulation AM (pour Amplitude Modulation ou modulation d'amplitude) correspond à une modification de l'amplitude de l'onde porteuse par le signal information.
 
 ### <em>Qu’est-ce que m(t) ? (pas le développement, seulement sa signification et ces limites)</em>
 
+- Signification : $m(t)$ est l'image du signal à transmettre.  
 
+- Limites : Le signal original est transformé (opération de cadrage) pour que $m(t)$ se retrouve strictement borné entre les valeurs +1 et -1.  
 
 ### <em>Dessine un signal modulé en AM.</em>
 
+Tu peux utiliser les schémas de la page globale 180 ou 183 pour ta réponse.
 
+- Sur le diagramme temporel, on dessine une onde porteuse très rapide à l'intérieur d'une "enveloppe".  
+
+- Cette enveloppe externe varie lentement en reproduisant la forme exacte du signal modulant $m(t)$.  
+
+- Selon la page globale 183, l'amplitude globale de cette onde fluctue (par exemple entre $0$ et $2A$ pour la partie supérieure de l'enveloppe).  
 
 ### <em>Montre par les calculs, le contenu du spectre AM ?</em>
 
+Voici la démonstration mathématique issue de la page globale 184 :
 
+Si on prend un signal $m(t) = M.\cos(\Omega t)$, Le signal modulé s'écrit : $v(t) = A.\cos(\omega t) + A.M.\cos(\Omega t).\cos(\omega t)$ 
+
+En utilisant la formule trigonométrique : 
+
+$\cos(\alpha + \beta) + \cos(\alpha - \beta) = 2.\cos \alpha.\cos \beta$ 
+
+On développe $v(t)$ pour obtenir le contenu spectral :
+
+$v(t) = A.\cos(\omega t) + \frac{A.M}{2}.\cos(\omega + \Omega)t + \frac{A.M}{2}.\cos(\omega - \Omega)t$ 
+
+(Cela montre bien la présence de la porteuse à la fréquence $\omega$, et de deux bandes latérales aux fréquences $\omega + \Omega$ et $\omega - \Omega$).  
 
 ### <em>Quel est le problème de la AM ?</em>
 
-
+Le problème principal est que les bandes latérales (qui contiennent la véritable information) sont de puissances bien plus faibles que le signal à la fréquence de la porteuse (qui, elle, ne contient pas d'information). En conséquence, il y a un important gaspillage d'énergie dans la transmission.  
 
 </div>
 
@@ -419,27 +439,47 @@ La masse virtuelle oblige l'intégralité de ce courant à traverser la résista
 
 ### <em>En quoi consiste la modulation ?</em>
 
-
+<b>(Page 179) :</b> C'est le fait d'inscrire une information (issue d'une source) sur une porteuse sinusoïdale de fréquence $f_o$ émise par l'émetteur.
 
 ### <em>Qu’est-ce que la Am ?</em>
 
-
+<b>(Page 180) :</b> C'est un type de modulation qui correspond à une modification de l'amplitude de l'onde porteuse par le signal information.
 
 ### <em>Qu’est-ce que m(t) ? (pas le développement, seulement sa signification et ces limites)</em>
 
-
+<b>(Page 182) :</b> C'est l'image du signal à transmettre. Il a subi un cadrage pour être strictement borné entre les valeurs $+1$ et $-1$.
 
 ### <em>Dessine un signal modulé en AM.</em>
 
+Le diagramme temporel à dessiner se trouve à la page globale 187. Il faut tracer trois graphiques superposés :
 
+<b>La porteuse :</b> Une onde sinusoïdale rapide et d'amplitude constante.
+
+<b>Le signal modulant $s(t)$ :</b> Une onde sinusoïdale lente qui tourne (ondule) autour de l'axe des 0V.
+
+<b>La porteuse modulée DSB :</b> Le signal résultant. Contrairement à l'AM classique, l'enveloppe touche le zéro. L'astuce visuelle indispensable à dessiner est le saut de phase : à chaque fois que le signal modulant $s(t)$ traverse la ligne du 0, les "vagues" de la porteuse modulée s'inversent (déphasage de 180°).
 
 ### <em>Pourquoi de la AM sans porteuse ?</em>
 
-
+La réponse est donnée au tout début de la section 13.3.2 (page globale 187) : C'est "pour ne pas perdre de puissance avec la porteuse, pour ne pas dépenser cette puissance". En effet, la porteuse en elle-même ne contient aucune information utile, l'enlever permet de faire des économies d'énergie à l'émission.
 
 ### <em>Montre par les calculs, le contenu du spectre AM SANS PORTEUSE ?</em>
 
+La démonstration mathématique (page globale 187) est la suivante :
 
+1. Pour retirer la porteuse, on supprime le "$1+$" de la formule de l'AM classique. L'équation de départ devient donc :
+
+    $v(t) = A \cdot m(t) \cdot \cos(\omega t)$
+
+2. On remplace le signal modulant $m(t)$ par son expression $M \cdot \cos(\Omega t)$ :
+
+    $v(t) = A \cdot M \cdot \cos(\Omega t) \cdot \cos(\omega t)$
+
+3. En appliquant la formule trigonométrique, on obtient le contenu spectral final :
+
+    $v(t) = \frac{A \cdot M}{2}\cos(\omega + \Omega)t + \frac{A \cdot M}{2}\cos(\omega - \Omega)t$
+
+Conclusion : L'équation finale montre qu'il n'y a plus de composante à la fréquence $\omega$ isolée. Il n'y a plus la présence de la porteuse dans le signal, uniquement les deux bandes latérales.
 
 </div>
 
