@@ -13,7 +13,7 @@ Selon la section 12.5 (page globale 173), un différenciateur sert à réaliser 
 
 Le schéma de principe à amplificateur opérationnel se trouve à la page globale 174 (figure a). Il ressemble à un intégrateur, mais les composants sont inversés :
 
-- Le signal d'entrée ($v_{in}$) traverse un condensateur $C$ en série.
+- Le signal d'entrée ( $v_{in}$ ) traverse un condensateur $C$ en série.
 
 - Une résistance $R$ est placée dans la boucle de contre-réaction (entre la sortie et l'entrée inverseuse).
 
@@ -23,9 +23,9 @@ Le schéma de principe à amplificateur opérationnel se trouve à la page globa
 
 Les signaux sont illustrés à la page globale 174 (figure b) :
 
-- <b>En haut ($v_{in}$) :</b> On trace une impulsion rectangulaire (un signal qui passe subitement d'un niveau bas à un niveau haut, y reste un moment, puis redescend).
+- <b>En haut ( $v_{in}$ ) :</b> On trace une impulsion rectangulaire (un signal qui passe subitement d'un niveau bas à un niveau haut, y reste un moment, puis redescend).
 
-- <b>En bas ($v_{out}$) :</b> La sortie est normalement à 0V. Lors du front montant de l'entrée (quand la tension grimpe brusquement), on observe un pic (pointe) négatif très étroit. Lors du front descendant, on observe un pic positif très étroit.
+- <b>En bas ( $v_{out}$ ) :</b> La sortie est normalement à 0V. Lors du front montant de l'entrée (quand la tension grimpe brusquement), on observe un pic (pointe) négatif très étroit. Lors du front descendant, on observe un pic positif très étroit.
 
 ### <em>Explique le fonctionnement de ce circuit en revenant, au besoin, sur les rappels de début de chapitre.</em>
 
