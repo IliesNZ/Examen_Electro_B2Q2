@@ -49,4 +49,4 @@ L'allure du spectre (décrite à la page globale 193) est complexe, mais voici s
 
 </div>
 
-Vers [Question 9](../question-12/answer.md)
+Vers [Question 12](../question-12/answer.md)
