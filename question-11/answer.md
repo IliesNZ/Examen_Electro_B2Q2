@@ -48,3 +48,5 @@ L'allure du spectre (décrite à la page globale 193) est complexe, mais voici s
 - L'amplitude : L'amplitude de la porteuse centrale n'est pas constante (elle peut même s'annuler). L'amplitude de la porteuse et de chaque bande latérale dépend de courbes mathématiques appelées "fonctions de Bessel" (notées $J_0, J_1, J_2...$), qui varient en fonction de "l'indice de modulation".
 
 </div>
+
+Vers [Question 9](../question-12/answer.md)
