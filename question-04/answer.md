@@ -41,9 +41,9 @@ Bien qu'il n'y ait pas de signal d'entrée externe, ce circuit oscille de lui-m�
 
 D'après la page globale 164, les formules sont :
 
-<b>Le taux de réaction ($B$) :</b> $B = \frac{R_1}{R_1 + R_2}$
+<b>Le taux de réaction ( $B$ ) :</b> $B = \frac{R_1}{R_1 + R_2}$
 
-<b>La période du signal ($T$) :</b> $T = 2RC \ln\left(\frac{1+B}{1-B}\right)$
+<b>La période du signal ( $T$ ) :</b> $T = 2RC \ln\left(\frac{1+B}{1-B}\right)$
 
 ### <em>Comment puis-je passer à un signal triangulaire ? Suite du schéma et explications.</em>
 
