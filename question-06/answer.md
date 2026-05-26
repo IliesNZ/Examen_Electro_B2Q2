@@ -10,7 +10,6 @@ Ce montage sert à obtenir des échelons parfaits (avec des pentes verticales et
 Le schéma complet se trouve à la page globale 171. Il est composé de plusieurs blocs en cascade :
 
 ![](../assets/page-171-part-1.png)
-![](../assets/page-171-part-2.png)
 
 1. Un premier amplificateur opérationnel monté en suiveur de tension (adaptateur d'impédance) qui reçoit l'entrée $v_{in}$.
 
@@ -22,7 +21,7 @@ Le schéma complet se trouve à la page globale 171. Il est composé de plusieur
 
 ### <em>Dessine les signaux sur un diagramme temporel.</em>
 
-Les 5 chronogrammes sont illustrés à la page globale 171.
+![](../assets/page-171-part-2.png)
 
 - $v_{in}$ : Un train d'impulsions négatives carrées (de hauteur $-v$).
 
