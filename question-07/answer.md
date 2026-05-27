@@ -3,40 +3,40 @@
 
 ### <em>À quoi sert-il ?</em>
 
-Selon la section 12.5 (page globale 173), un différenciateur sert à réaliser l'opération mathématique de différentiation. Sa tension de sortie est directement proportionnelle à la vitesse instantanée de variation de la tension d'entrée (la pente). Ses applications classiques sont :
-
-- La détection des fronts avant et arrière d'une impulsion rectangulaire (création de pics).
-
-- La production d'une sortie rectangulaire à partir d'une entrée triangulaire.
+Ce circuit vient corriger le défaut du montage précédent, dont les pentes des marches étaient jugées obliques ou "pas assez raides". Ce montage amélioré est spécifiquement utilisé pour les oscilloscopes échantillonneurs, pour tracer des réseaux de caractéristiques courant-tension des transistors, et pour échelonner le courant de base ou de grille. (Pages 171 et 172)  
 
 ### <em>Dessine le circuit qui réalise cette fonction.</em>
 
-Le schéma de principe à amplificateur opérationnel se trouve à la page globale 174 (figure a). Il ressemble à un intégrateur, mais les composants sont inversés :
-
-- Le signal d'entrée ( $v_{in}$ ) traverse un condensateur $C$ en série.
-
-- Une résistance $R$ est placée dans la boucle de contre-réaction (entre la sortie et l'entrée inverseuse).
-
-- L'entrée non inverseuse (+) est reliée à la masse.
+![](../assets/page-171-part-1.png)
 
 ### <em>Dessine les signaux sur un diagramme temporel.</em>
 
-Les signaux sont illustrés à la page globale 174 (figure b) :
+![](../assets/page-171-part-2.png)
 
-- <b>En haut ( $v_{in}$ ) :</b> On trace une impulsion rectangulaire (un signal qui passe subitement d'un niveau bas à un niveau haut, y reste un moment, puis redescend).
+- $v_{in}$ : L'entrée est une série d'impulsions carrées descendantes (de $0$ à une valeur $-v$).  
 
-- <b>En bas ( $v_{out}$ ) :</b> La sortie est normalement à 0V. Lors du front montant de l'entrée (quand la tension grimpe brusquement), on observe un pic (pointe) négatif très étroit. Lors du front descendant, on observe un pic positif très étroit.
+- $v1$ : Cette tension forme des pics pointus (des "spikes"). Un pic vers le bas se crée au début de l'impulsion de $v_{in}$, et un pic vers le haut se forme à la fin de l'impulsion.  
+
+- $vc1$ (tension sur $C1$) : Elle forme un créneau aux bords arrondis. Elle augmente pendant l'impulsion négative de $v_{in}$ et redescend à $0$ dès que $v_{in}$ remonte.  
+
+- $vc2$ (tension sur $C2$) : Elle prend la forme d'un escalier qui monte. À chaque fin d'impulsion de $v_{in}$, $vc2$ s'élève brusquement d'un cran (d'une valeur $v'$) puis garde cette valeur en mémoire de façon parfaitement plate.  
+
+- $v_{out}$ : La tension de sortie est le miroir parfait de $vc2$. Elle dessine un escalier descendant aux marches très nettes (de hauteur $v'$). (Page 171)  
 
 ### <em>Explique le fonctionnement de ce circuit en revenant, au besoin, sur les rappels de début de chapitre.</em>
 
-L'explication est donnée à la section 12.5.2 (page globale 174) :
+1. État initial ($t_0$) : Les condensateurs $C1$ et $C2$ sont vides (déchargés) et les diodes $D1$ et $D2$ sont bloquées.  
 
-Grâce à la masse virtuelle, l'entrée inverseuse de l'ampli op est maintenue à 0V. Le signal d'entrée force un courant à travers le condensateur. Ce courant répond à la formule mathématique fondamentale des condensateurs : $i = C \frac{dv}{dt}$ (où $\frac{dv}{dt}$ représente la pente du signal d'entrée).
+2. Temps $t_1$ (Chute de l'impulsion) : Lorsque l'entrée $v_{in}$ devient négative ($-v$), la diode $D1$ devient passante. Le condensateur $C1$ se charge alors de façon presque instantanée (la constante de temps est très courte car elle ne dépend que de l'impédance de sortie de l'AOP et de la résistance interne de la diode). La tension $vc1$ atteint la valeur $V$.  
 
-La masse virtuelle oblige l'intégralité de ce courant à traverser la résistance de réaction $R$, ce qui crée la tension de sortie. Puisque les fronts d'une impulsion rectangulaire sont presque verticaux (pente infiniment grande), ils génèrent un courant bref et très intense, ce qui se traduit en sortie par l'apparition de pics de tension très étroits.
+3. Temps $T_2$ (Fin de l'impulsion) : L'impulsion d'entrée se termine et $v_{in}$ remonte. C'est maintenant la diode $D2$ qui se met à conduire. Le condensateur $C1$ se décharge brutalement vers la masse virtuelle située à l'entrée inverseuse du second AOP.  
+
+4. Transfert et mémoire : Toute la charge emmagasinée par $C1$ est transférée dans $C2$ selon la formule fondamentale $Q=C \cdot V$.  
+
+5. Calcul de la hauteur de marche : L'égalité de transfert de charge s'écrit $C_1 \cdot V = C_2 \cdot V'$. La valeur de la tension qui s'ajoute à chaque palier est donc calculée par $V'=V \frac{C_1}{C_2}$.  
+
+6. À la fin de ce processus très bref, la tension de sortie s'établit à $V_{out} = -V'$. L'AOP agit comme une mémoire et maintient ce palier horizontalement jusqu'à l'arrivée de la prochaine impulsion. (Page 172)  
 
 </div>
-
-<!-- TODO: find images for this question -->
 
 Vers [Question 8](../question-08/answer.md)

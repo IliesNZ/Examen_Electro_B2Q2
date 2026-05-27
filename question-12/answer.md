@@ -11,6 +11,8 @@
 
 ### <em>Dessine un exemple des trois modulations numériques de base.</em>
 
+![ASK](../assets/page-titi.png) ASK
+
 - ASK (Modulation d'amplitude) : L'amplitude de la porteuse varie selon l'état binaire.  FSK
 
 - (Modulation de fréquence) : La fréquence de la porteuse change selon le bit transmis.  PSK 
