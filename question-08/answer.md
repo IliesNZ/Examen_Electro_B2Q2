@@ -33,7 +33,7 @@
 
 ### <em>Dessine les signaux sur un diagramme temporel.</em>
 
-![signaux differenciateur améliorer](../assets/page-.png)
+![signaux differenciateur améliorer](../assets/page-174-amelioration-signal-julian.png)
 
 ### <em>Explique le fonctionnement de ce circuit. Pas le 1.5.3.</em>
 
@@ -42,7 +42,5 @@
 - Cela empêche le circuit d'amplifier indéfiniment le bruit et rend le montage beaucoup plus stable pour les applications réelles.  
 
 </div>
-
-<!-- TODO: finish this question -->
 
 Vers [Question 9](../question-09/answer.md)
