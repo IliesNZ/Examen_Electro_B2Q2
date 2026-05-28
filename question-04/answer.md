@@ -49,6 +49,8 @@ D'après la page globale 164, les formules sont :
 
 Pour obtenir un signal triangulaire, il faut mettre en cascade l'oscillateur à relaxation avec un intégrateur (page globale 164, section 12.4.1.2). Le schéma complet couple donc la sortie du premier AOP (l'oscillateur) à l'entrée du second AOP (l'intégrateur via une résistance $R_4$ et un condensateur $C_2$).
 
+![Oscillateur Relaxation -> Intégrateur](../assets/page-164-osci-int.png)
+
 ### <em>Explique le fonctionnement de ce circuit en revenant au besoin sur les rappels de début de chapitre. </em>
 
 Le signal rectangulaire généré par le premier étage (l'oscillateur à relaxation) va servir à commander le second étage (l'intégrateur). Comme le signal d'entrée de l'intégrateur est une alternance de constantes ($+V_{sat}$ et $-V_{sat}$), l'opération mathématique d'intégration va transformer ces paliers constants en rampes linéaires (une pente montante puis une pente descendante). La succession de ces rampes crée à la sortie un signal triangulaire parfait.
