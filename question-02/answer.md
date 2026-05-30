@@ -31,11 +31,13 @@ Les diagrammes temporels se trouvent à la page 149 (figures a et b).
 
 ### <em>Explique le fonctionnement de ce circuit en revenant au besoin sur les rappels de début de chapitre.</em>
 
-- Rappel du principe (page 148) : La méthode repose sur l'absence de boucle de contre-réaction. Cela fait que l'amplificateur fonctionne avec son "gain en tension en boucle ouverte" ($A_{OL}$) qui est immense (ex: 100 000). De ce fait, la moindre différence de tension à l'entrée (aussi petite que 0,14 mV) est amplifiée de manière si importante qu'elle "sature" la sortie.
+- L'immense gain et la saturation (Rappel) : En l'absence de contre-réaction négative, le gain très élevé de l'AOP fait que la tension de sortie ne peut pas rester dans des valeurs intermédiaires. Dès que la tension d'entrée diffère de la tension de référence, la sortie "sature" instantanément aux limites de l'alimentation (+Vsat ou -Vsat). C'est ce phénomène qui explique pourquoi le signal de sortie est parfaitement plat et rectangulaire.
 
-- Le fonctionnement (pages 148 et 149) : Le seuil de déclenchement est ici fixé à 0V (puisqu'une des pattes est à la masse). Lorsque le signal sinusoïdal est appliqué, la sortie n'a pas d'autre choix que d'être dans un de ses deux états extrêmes :
-  - Dès que la sinusoïde passe légèrement au-dessus de 0V, le comparateur part en saturation positive ($+V_{sat}$).
-  - Dès que la sinusoïde passe légèrement en dessous de 0V, il bascule instantanément en saturation négative ($-V_{sat}$).Puisque le signal d'entrée est périodique et traverse continuellement le zéro, la sortie bascule de bas en haut et de haut en bas à chaque traversée, créant ainsi une onde rectangulaire ou carrée parfaite.
+- ​La réaction positive : Contrairement à un simple détecteur de passage par zéro (qui bascule dès que le signal croise 0V en boucle ouverte), ce circuit utilise une réaction positive (la résistance R2 ramène une partie du signal sur l'entrée non inverseuse). Cela crée un effet d'hystérésis, définissant deux seuils distincts de basculement au lieu d'un seul.
+
+- ​Le mécanisme de conversion : La bascule de Schmitt transforme l'onde sinusoïdale en signal carré en exploitant ces deux seuils. Quand la sinusoïde d'entrée monte et dépasse le Point de Déclenchement Supérieur (PDS), l'AOP sature brutalement à -Vsat. Lorsque l'alternance redescend et franchit le Point de Déclenchement Inférieur (PDI), la sortie retourne instantanément saturer à +Vsat.
+
+C'est donc la combinaison du gain infini de l'AOP (qui garantit des états hauts et bas très stricts) et de la réaction positive (qui fixe les seuils PDS et PDI) qui permet cette conversion propre et périodique du sinusoïdal au rectangulaire.
 
 </div>
 
