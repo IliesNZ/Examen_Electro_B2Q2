@@ -3,16 +3,11 @@
 
 ### <em>Dessine le circuit qui réalise cette fonction.</em>
 
-Le circuit qui réalise cette fonction s'appelle un comparateur (ou détecteur de passage par zéro). Selon la page 148, il s'agit simplement d'un amplificateur opérationnel connecté sans résistance de réaction.
 
 <figure style="width: 50%; margin: 0 auto;">
 
   ![](../assets/page-148.png)
 </figure>
-
-- Pour un comparateur non inversé : L'entrée inverseuse (-) est reliée à la masse (le point de référence à 0V), et le signal d'entrée ($v_{in}$) est appliqué à l'entrée non inverseuse (+).
-
-- Pour un comparateur inversé : L'entrée non inverseuse (+) est reliée à la masse, et le signal d'entrée ($v_{in}$) est appliqué sur l'entrée inverseuse (-).
 
 ### <em>Dessine les signaux sur un diagramme temporel.</em>
 
@@ -22,12 +17,6 @@ Les diagrammes temporels se trouvent à la page 149 (figures a et b).
 
   ![](../assets/page-149.png)
 </figure>
-
-- On y trace l'onde sinusoïdale d'entrée qui ondule autour de l'axe de 0V.
-
-- On y trace superposée l'onde de sortie : c'est un signal rectangulaire franc, qui alterne entre une tension maximale ($+V_{sat}$) et une tension minimale ($-V_{sat}$).
-
-- Le point crucial sur le diagramme est que le basculement vertical du signal de sortie se produit exactement à l'instant où la sinusoïde d'entrée coupe l'axe horizontal (le point zéro). Dans le cas d'un comparateur inversé, l'onde de sortie est déphasée de 180° par rapport à l'entrée.
 
 ### <em>Explique le fonctionnement de ce circuit en revenant au besoin sur les rappels de début de chapitre.</em>
 
