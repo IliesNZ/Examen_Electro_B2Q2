@@ -11,7 +11,6 @@
 
 ### <em>Dessine les signaux sur un diagramme temporel.</em>
 
-Les diagrammes temporels se trouvent à la page 149 (figures a et b).
 
 <figure style="width: 50%; margin: 0 auto;">
 
