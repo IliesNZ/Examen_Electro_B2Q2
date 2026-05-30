@@ -25,7 +25,7 @@
 
 - ​Le mécanisme de conversion : La bascule de Schmitt transforme l'onde sinusoïdale en signal carré en exploitant ces deux seuils. Quand la sinusoïde d'entrée monte et dépasse le Point de Déclenchement Supérieur (PDS), l'AOP sature brutalement à -Vsat. Lorsque l'alternance redescend et franchit le Point de Déclenchement Inférieur (PDI), la sortie retourne instantanément saturer à +Vsat.
 
-C'est donc la combinaison du gain infini de l'AOP (qui garantit des états hauts et bas très stricts) et de la réaction positive (qui fixe les seuils PDS et PDI) qui permet cette conversion propre et périodique du sinusoïdal au rectangulaire.
+L'intérêt d'avoir deux seuils séparés (un pour la montée, un pour la descente) est d'éviter les instabilités. Si le circuit n'avait qu'un seul point de basculement à 0V, le moindre petit parasite électrique autour de 0V ferait basculer la sortie plusieurs fois de suite de façon imprévisible. Avec le PDS et le PDI, le signal doit faire un "grand écart" pour faire basculer l'AOP, ce qui garantit une transition franche et propre pour obtenir un signal carré parfait.
 
 </div>
 
