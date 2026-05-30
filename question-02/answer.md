@@ -20,7 +20,7 @@ Les diagrammes temporels se trouvent à la page 149 (figures a et b).
 
 <figure style="width: 50%; margin: 0 auto;">
 
-  ![](../assets/page-149.png)
+  ![](../assets/page-148-fig-c.png)
 </figure>
 
 - On y trace l'onde sinusoïdale d'entrée qui ondule autour de l'axe de 0V.
