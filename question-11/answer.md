@@ -35,6 +35,8 @@ On l'obtient en utilisant un VCO (Voltage Commanded Oscillator, ou Oscillateur c
 
 - Fonctionnement : La tension d'entrée détermine directement la fréquence de sortie. Le signal varie autour de la tension de référence $V_o$, ce qui fait que la fréquence de sortie varie proportionnellement autour de la fréquence centrale $f_o$.
 
+![VCO](../assets/page-191-fig-vco.png)
+
 ### <em>Quelle est l’allure d’un spectre FM (pas de calculs, expliquer la porteuse et les bandes latérales).</em>
 
 L'allure du spectre (décrite à la page globale 193) est complexe, mais voici ses caractéristiques principales à dessiner et expliquer :
